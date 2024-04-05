@@ -1,23 +1,33 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
-  IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonAlert, IonButton, IonActionSheet } from '@ionic/react';
-
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonAlert, IonButton, IonActionSheet } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
   return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Profile</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">Profile</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        
     <IonCard>
-      <img alt="Silhouette of mountains" src="src/img/reggie.png" />
-      <IonCardHeader>
-        <IonCardTitle>Reggie</IonCardTitle>
-        <IonCardSubtitle>wala gwapo lang</IonCardSubtitle>
-      </IonCardHeader>
+      <img alt="Silhouette of mountains" src="../src/img/reggie.png" />
+        <IonCardHeader>
+          <IonCardTitle>Madrijanon, Reggie</IonCardTitle>
+           <IonCardSubtitle>Student</IonCardSubtitle>
+            </IonCardHeader>
 
-      <IonCardContent>Minsan may ni like akong status nang babae kase natawa ako.
-After 10 seconds nagpadala sya nang Relationship Request.
-Hay Buhay.</IonCardContent>
+      <IonCardContent>Nothing more, nothing less.</IonCardContent>
 
-<IonButton id="present-alert">Click Me</IonButton>
+      <IonButton id="present-alert" expand="full" color="success">Quick Facts</IonButton>
       <IonAlert
         trigger="present-alert"
         header="A Short Title Is Best"
@@ -26,7 +36,7 @@ Hay Buhay.</IonCardContent>
         buttons={['Action']}
       ></IonAlert>
 
-<IonButton id="open-action-sheet">Open</IonButton>
+<IonButton id="open-action-sheet" expand="block" color="medium">Open Action Sheet</IonButton>
       <IonActionSheet
         trigger="open-action-sheet"
         header="Actions"
@@ -52,10 +62,10 @@ Hay Buhay.</IonCardContent>
             },
           },
         ]}
-      ></IonActionSheet>f
-
-
+      ></IonActionSheet>
     </IonCard>
+        </IonContent>
+      </IonPage>
   );
 };
 
