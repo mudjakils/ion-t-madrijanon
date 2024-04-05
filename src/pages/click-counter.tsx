@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
-import './Tab2.css';
+import './click-counter.css';
 
-const Tab2: React.FC = () => {
+const clickcounter: React.FC = () => {
   const [clickCount, setClickCount] = useState(0);
 
   const handleButtonClick = () => {
@@ -13,7 +13,7 @@ const Tab2: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Click Counter</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -31,4 +31,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default clickcounter;

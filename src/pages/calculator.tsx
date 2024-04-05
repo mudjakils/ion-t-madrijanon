@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonGrid, IonRow, IonCol, IonInput } from '@ionic/react';
-import './Tab3.css';
+import './calculator.css';
 
-const Tab3: React.FC = () => {
+const Calculator: React.FC = () => {
   const [displayValue, setDisplayValue] = useState('0');
 
   const handleButtonClick = (value: string) => {
@@ -79,4 +79,4 @@ const Tab3: React.FC = () => {
   );
 };
 
-export default Tab3;
+export default Calculator;
