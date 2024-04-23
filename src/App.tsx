@@ -69,7 +69,7 @@ const App: React.FC = () => (
             <Calculator />
           </Route>
           <Route exact path="/TodoList">
-            <ClickCounter />
+            <TodoList />
           </Route>
 
         </IonRouterOutlet>

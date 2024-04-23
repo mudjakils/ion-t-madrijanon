@@ -54,7 +54,7 @@ const Home: React.FC = () => {
         </IonButton>
 
         {/* Third Card */}
-        <IonButton onClick={() => handleCardClick('/todo-list')} fill="clear">
+        <IonButton onClick={() => handleCardClick('/TodoList')} fill="clear">
           <IonCard>
             <IonCardHeader>
               <IonCardSubtitle className="bold-text"></IonCardSubtitle>

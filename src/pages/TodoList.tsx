@@ -1,91 +1,64 @@
 import React, { useState } from 'react';
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonList,
-  IonItem,
-  IonLabel,
-  IonCheckbox,
-  IonInput,
-  IonButton,
-} from '@ionic/react';
 
-interface TodoItem {
+interface Todo {
   id: number;
   text: string;
   completed: boolean;
 }
 
 const TodoList: React.FC = () => {
-  const [todos, setTodos] = useState<TodoItem[]>([]);
-  const [newTodoText, setNewTodoText] = useState<string>('');
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const [inputText, setInputText] = useState<string>('');
 
   const addTodo = () => {
-    if (newTodoText.trim() !== '') {
-      const newTodo: TodoItem = {
-        id: Date.now(),
-        text: newTodoText.trim(),
+    if (inputText.trim() !== '') {
+      const newTodo: Todo = {
+        id: todos.length + 1,
+        text: inputText,
         completed: false,
       };
       setTodos([...todos, newTodo]);
-      setNewTodoText('');
+      setInputText('');
     }
   };
 
   const toggleTodo = (id: number) => {
-    setTodos(
-      todos.map(todo =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
+    const updatedTodos = todos.map(todo =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
     );
+    setTodos(updatedTodos);
   };
 
   const removeTodo = (id: number) => {
-    setTodos(todos.filter(todo => todo.id !== id));
+    const updatedTodos = todos.filter(todo => todo.id !== id);
+    setTodos(updatedTodos);
   };
 
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>To-Do List</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonList>
-          {todos.map(todo => (
-            <IonItem key={todo.id}>
-              <IonLabel>{todo.text}</IonLabel>
-              <IonCheckbox
-                slot="start"
-                checked={todo.completed}
-                onIonChange={() => toggleTodo(todo.id)}
-              />
-              <IonButton
-                fill="clear"
-                slot="end"
-                onClick={() => removeTodo(todo.id)}
-              >
-                Delete
-              </IonButton>
-            </IonItem>
-          ))}
-        </IonList>
-        <IonItem>
-          <IonInput
-            placeholder="Add new todo"
-            value={newTodoText}
-            onIonChange={e => setNewTodoText(e.detail.value!)}
-          />
-          <IonButton slot="end" onClick={addTodo}>
-            Add
-          </IonButton>
-        </IonItem>
-      </IonContent>
-    </IonPage>
+    <div>
+      <h1>Todo List</h1>
+      <input
+        type="text"
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+      />
+      <button onClick={addTodo}>Add Todo</button>
+      <ul>
+        {todos.map(todo => (
+          <li key={todo.id}>
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => toggleTodo(todo.id)}
+            />
+            <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+              {todo.text}
+            </span>
+            <button onClick={() => removeTodo(todo.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
