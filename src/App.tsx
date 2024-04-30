@@ -19,6 +19,7 @@ import Profile from './pages/profile';
 import ClickCounter from './pages/click-counter';
 import Calculator from './pages/calculator';
 import TodoList from './pages/TodoList';
+import Notes from './pages/notes/notes';
 
 
 
@@ -71,6 +72,9 @@ const App: React.FC = () => (
           <Route exact path="/TodoList">
             <TodoList />
           </Route>
+          <Route exact path="/Notes">
+            <Notes />
+          </Route>
 
         </IonRouterOutlet>
 
@@ -97,6 +101,10 @@ const App: React.FC = () => (
         <IonTabButton tab="todo-list" href="/TodoList">
           <IonIcon aria-hidden="true" icon={ellipse} />
          <IonLabel>To-Do List</IonLabel>
+       </IonTabButton>
+       <IonTabButton tab="notes" href="/notes">
+          <IonIcon aria-hidden="true" icon={ellipse} />
+         <IonLabel>notes</IonLabel>
        </IonTabButton>
 
       </IonTabs>
