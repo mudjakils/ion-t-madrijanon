@@ -19,6 +19,7 @@ import Profile from './pages/profile';
 import ClickCounter from './pages/click-counter';
 import Calculator from './pages/calculator';
 import TodoList from './pages/TodoList';
+import Quotegenerator from './pages/quotegenerator';
 import Notes from './pages/notes/notes';
 
 
@@ -71,6 +72,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/TodoList">
             <TodoList />
+          </Route>
+          <Route exact path="/quotegenerator">
+            <Quotegenerator />
           </Route>
           <Route exact path="/Notes">
             <Notes />
