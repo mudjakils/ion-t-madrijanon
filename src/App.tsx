@@ -15,10 +15,10 @@ import { cafeOutline, calculatorOutline, ellipse, home, informationCircle, perso
 // Home resources
 import Home from './pages/home';
 
-import Profile from './pages/profile';
-import ClickCounter from './pages/click-counter';
+import Profile from './pages/Profile/profile';
+import ClickCounter from './pages/Clickcounter/click-counter';
 import Calculator from './pages/calculator';
-import TodoList from './pages/TodoList';
+import TodoList from './pages/Todolist/TodoList';
 import Quotegenerator from './pages/quotegenerator';
 import Notes from './pages/notes/notes';
 
