@@ -30,7 +30,7 @@ import {
 } from '@ionic/react';
 
 //Dynamic data reference
-import rizzCard from '../../src/assets/json/rizzCard.json';
+import rizzCard from '../../assets/json/rizzCard.json';
 
 const QuoteGenerator: React.FC = () => {
 

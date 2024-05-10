@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonButtons, IonBackButton } from '@ionic/react';
 import './click-counter.css';
 
 const clickcounter: React.FC = () => {
@@ -12,15 +12,20 @@ const clickcounter: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
+        
         <IonToolbar>
           <IonTitle>Click Counter</IonTitle>
         </IonToolbar>
+        <IonButtons slot="start">
+          <IonBackButton defaultHref="/" />
+        </IonButtons>
+
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
-          <IonToolbar>
+          {/* <IonToolbar>
             <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
+          </IonToolbar> */}
         </IonHeader>
         <div className="container">
           <p>Number of clicks: {clickCount}</p>

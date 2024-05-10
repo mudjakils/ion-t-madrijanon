@@ -10,19 +10,17 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { cafeOutline, calculatorOutline, ellipse, home, informationCircle, personOutline, speedometerOutline, square, triangle } from 'ionicons/icons';
+import { calculatorOutline, ellipse, home, personOutline, speedometerOutline, square, triangle } from 'ionicons/icons';
 
 // Home resources
 import Home from './pages/home';
 
-import Profile from './pages/Profile/profile';
-import ClickCounter from './pages/Clickcounter/click-counter';
-import Calculator from './pages/calculator';
-import TodoList from './pages/Todolist/TodoList';
-import Quotegenerator from './pages/quotegenerator';
+import Profile from './pages/profile/profile';
+import ClickCounter from './pages/clickcounter/click-counter'; 
+import Calculator from './pages/calculator/calculator';
+import Todolist from './pages/todolist/todolist';
+import QuotesGenerator from './pages/quotegenerator/quotegenerator';
 import Notes from './pages/notes/notes';
-
-
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -52,31 +50,34 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           
           {/* Application default route */}
-          <Route exact path="/">
-            <Redirect to="/home" />
+          <Route exact path="/ion-t-madrijanon/">
+            <Redirect to="/ion-t-madrijanon/home" />
           </Route>
 
           {/* Home Router */}
-          <Route exact path="/home">
+          <Route exact path="/ion-t-madrijanon/home">
             <Home />
           </Route>
 
-          <Route exact path="/profile">
+          <Route exact path="/ion-t-madrijanon/profile">
             <Profile />
           </Route>
-          <Route exact path="/click-counter">
+          <Route exact path="/ion-t-madrijanon/home/click-counter">
             <ClickCounter />
           </Route>
-          <Route path="/calculator">
+          <Route path="/ion-t-madrijanon/home/calculator">
             <Calculator />
           </Route>
-          <Route exact path="/TodoList">
-            <TodoList />
+
+          <Route path="/ion-t-madrijanon/home/to-do-list">
+            <Todolist />
           </Route>
-          <Route exact path="/quotegenerator">
-            <Quotegenerator />
+
+          <Route path="/ion-t-madrijanon/home/quotesgenerator">
+            <QuotesGenerator />
           </Route>
-          <Route exact path="/Notes">
+
+          <Route path="/ion-t-madrijanon/home/notes">
             <Notes />
           </Route>
 
@@ -84,32 +85,27 @@ const App: React.FC = () => (
 
         <IonTabBar slot="bottom">
           {/* Home Tab Button */}
-          <IonTabButton tab="home" href="/home">
+          <IonTabButton tab="home" href="/ion-t-madrijanon/home">
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-
-          <IonTabButton tab="profile" href="#">
-            <IonIcon aria-hidden="true" icon={cafeOutline} />
-            <IonLabel>Blank</IonLabel>
+       
+          <IonTabButton tab="profile" href="/ion-t-madrijanon/profile">
+            <IonIcon aria-hidden="true" icon={personOutline} />
+            <IonLabel>Profile</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="Click-Counter" href="/profile">
-            <IonIcon aria-hidden="true" icon={informationCircle} />
-            <IonLabel>Info</IonLabel>
+            {/*
+          <IonTabButton tab="clickcounter" href="/clickcounter">
+            <IonIcon aria-hidden="true" icon={speedometerOutline} />
+            <IonLabel>Click Counter</IonLabel>
           </IonTabButton>
-          {/* <IonTabButton tab="calculator" href="/calculator">
+        
+          <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={calculatorOutline} />
             <IonLabel>Calculator</IonLabel>
-          </IonTabButton> */}
+          </IonTabButton>
+           */}
         </IonTabBar>
-        <IonTabButton tab="todo-list" href="/TodoList">
-          <IonIcon aria-hidden="true" icon={ellipse} />
-         <IonLabel>To-Do List</IonLabel>
-       </IonTabButton>
-       <IonTabButton tab="notes" href="/notes">
-          <IonIcon aria-hidden="true" icon={ellipse} />
-         <IonLabel>notes</IonLabel>
-       </IonTabButton>
 
       </IonTabs>
     </IonReactRouter>
