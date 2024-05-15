@@ -19,7 +19,7 @@ const profile: React.FC = () => {
         </IonHeader>
         
     <IonCard>
-      <img alt="Silhouette of mountains" src="../src/img/reggie.png" />
+      <img alt="Silhouette of mountains" src="../../src/assets/img/reggie.png" />
         <IonCardHeader>
           <IonCardTitle>Madrijanon, Reggie</IonCardTitle>
            <IonCardSubtitle>Student</IonCardSubtitle>
