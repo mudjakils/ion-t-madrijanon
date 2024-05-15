@@ -1,3 +1,4 @@
+import { IonButtons, IonBackButton } from '@ionic/react';
 import React, { useState } from 'react';
 
 interface Todo {
@@ -36,6 +37,9 @@ const TodoList: React.FC = () => {
 
   return (
     <div>
+        <IonButtons slot='start'>
+              <IonBackButton defaultHref='/ion-t-madrijanon/home'/>
+           </IonButtons>
       <h1>Todo List</h1>
       <input
         type="text"

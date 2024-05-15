@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBackButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonAlert, IonButton, IonActionSheet } from '@ionic/react';
 import ExploreContainer from '../../components/ExploreContainer';
 import './profile.css';
@@ -8,6 +8,9 @@ const profile: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+        <IonButtons slot='start'>
+              <IonBackButton defaultHref='/ion-t-madrijanon/home'/>
+           </IonButtons>
           <IonTitle>Profile</IonTitle>
         </IonToolbar>
       </IonHeader>
@@ -19,7 +22,7 @@ const profile: React.FC = () => {
         </IonHeader>
         
     <IonCard>
-      <img alt="Silhouette of mountains" src="../src/img/reggie.png" />
+      <img alt="Silhouette of mountains" src="../../src/assets/img/reggie.png" />
         <IonCardHeader>
           <IonCardTitle>Madrijanon, Reggie</IonCardTitle>
            <IonCardSubtitle>Student</IonCardSubtitle>

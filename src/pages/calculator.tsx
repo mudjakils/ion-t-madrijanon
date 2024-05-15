@@ -34,8 +34,8 @@ const Calculator: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         
-        <IonButtons slot="start">
-          <IonBackButton defaultHref="/" />
+        <IonButtons slot='start'>
+          <IonBackButton defaultHref='/ion-t-madrijanon/home'/>
         </IonButtons>
         <IonContent fullscreen className="ion-padding" style={{ backgroundColor: 'dark' }}>
           <IonGrid>
