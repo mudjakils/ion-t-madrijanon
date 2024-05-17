@@ -89,27 +89,13 @@ const App: React.FC = () => (
             <IonLabel>Home</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="profile" href="#">
-            <IonIcon aria-hidden="true" icon={cafeOutline} />
-            <IonLabel>Blank</IonLabel>
-          </IonTabButton>
           <IonTabButton tab="Click-Counter" href="/ion-t-madrijanon/profile">
             <IonIcon aria-hidden="true" icon={informationCircle} />
             <IonLabel>Info</IonLabel>
           </IonTabButton>
-          {/* <IonTabButton tab="calculator" href="/calculator">
-            <IonIcon aria-hidden="true" icon={calculatorOutline} />
-            <IonLabel>Calculator</IonLabel>
-          </IonTabButton> */}
+
         </IonTabBar>
-        <IonTabButton tab="todo-list" href="/ion-t-madrijanon/TodoList">
-          <IonIcon aria-hidden="true" icon={ellipse} />
-         <IonLabel>To-Do List</IonLabel>
-       </IonTabButton>
-       <IonTabButton tab="notes" href="/ion-t-madrijanon/notes">
-          <IonIcon aria-hidden="true" icon={ellipse} />
-         <IonLabel>notes</IonLabel>
-       </IonTabButton>
+
 
       </IonTabs>
     </IonReactRouter>

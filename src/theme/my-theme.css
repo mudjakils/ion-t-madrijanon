@@ -1,0 +1,17 @@
+:root {
+	--ion-color-my-app-main: #58df75;
+	--ion-color-my-app-main-rgb: 88,223,117;
+	--ion-color-my-app-main-contrast: #000000;
+	--ion-color-my-app-main-contrast-rgb: 0,0,0;
+	--ion-color-my-app-main-shade: #4dc467;
+	--ion-color-my-app-main-tint: #69e283;
+}
+
+.ion-color-my-app-main {
+	--ion-color-base: var(--ion-color-my-app-main);
+	--ion-color-base-rgb: var(--ion-color-my-app-main-rgb);
+	--ion-color-contrast: var(--ion-color-my-app-main-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-my-app-main-contrast-rgb);
+	--ion-color-shade: var(--ion-color-my-app-main-shade);
+	--ion-color-tint: var(--ion-color-my-app-main-tint);
+}
