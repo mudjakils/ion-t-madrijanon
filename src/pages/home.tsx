@@ -32,6 +32,7 @@ import './home.css';
 //Ionic Icons
 import { speedometerOutline,calculator,pencil, chatbubble, readerOutline, logoIonic,logoFirebase, logoReact} from 'ionicons/icons';
 
+
 const cardData = [
   {
     title: 'Click Counter',

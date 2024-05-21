@@ -1,27 +1,28 @@
-.horizontal-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Adjust as per your need */
-    padding: 0; /* Optional: Remove default padding */
-  }
-  
-  .circular-button {
-  border-radius: 50%;
-  }
-  
-  /* #profile{
-    width: 20px;
-  } */
-  
-  /* variables.css */
-  .blue-background {
-  background-color: rgb(14, 14, 241);
-  }
-  
-  /* #card1, #card2, #card3, #card4 {
-    transition: transform 0.3s ease !important;
-  }
-  
-  #card1:hover, #card2:hover, #card3:hover, #card4:hover {
-    transform: scale(1.05) !important;
-  } */
+.home-card-title{
+  font-size: 20px;
+}
+
+.home-card-icon {
+  font-size: 3rem;
+}
+
+.home-card-subicon {
+  font-size: 1rem;
+}
+.gradient {
+  background: linear-gradient(to right, #1b1b1b, #525252); /* Adjust colors as needed */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+}
+
+.card-gif {
+  width: 25%; /* Adjust size as needed */
+  height: 25%; /* Maintain aspect ratio */
+  margin-left: 3rem;
+
+}
